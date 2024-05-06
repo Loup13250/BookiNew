@@ -1,4 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');  /* importation police titre NAV */
+/****** header ***********/
+
+
+.texte-raleway-titre {
+    font-family: 'Raleway',bold, sans-serif;
+    font-weight: 700; /* Gras */
+    font-size: 22px;
+    
+}
+
+.texte-raleway {
+    font-family: 'Raleway', sans-serif,bold;
+    font-size: 16px;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between; /* espace entre les div  */
+    align-items: flex-start; /* allignement  */
+    padding: 20px;   /* marge extérieur  */
+   
+}
+.logo {
+    max-width: 4%;  /* taille du logo */
+    height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
+}
+.nav-links {
+    display: flex; /* espace entre les div  */
+    gap: 20px; 
+    
+}
+
+
+.nav-link:hover {
+    color: blue; 
+    position: relative; /* position */
+}
+.nav-link:hover::before {   /* lorsque je passe la souris, barre bleu au dessus d'hebergement / activité */
+    content: ""; /* vide car :before */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -20px;
+    border-top: 2px solid blue; /* bordure top a la selection */
+}
+
+
+
+
+
+
 /****** General ***********/
+
+
 * {
     font-family: 'Raleway', sans-serif;
 }
