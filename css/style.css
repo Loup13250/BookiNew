@@ -2,40 +2,43 @@
 /****** header ***********/
 
 
-.texte-raleway-titre {
-    font-family: 'Raleway',bold, sans-serif;
+.texte-raleway-titre {    /* police Gras */
+    font-family: 'Raleway', sans-serif;
     font-weight: 700; /* Gras */
     font-size: 22px;
+    margin-bottom: 5px;  /* enlever l'ecart entre les 2 <p> */
     
 }
 
-.texte-raleway {
+.texte-raleway {        /* Police text */
     font-family: 'Raleway', sans-serif,bold;
     font-size: 16px;
+    margin-top: 0px;    /* enlever l'ecart entre les 2 <p> */
 }
 
 
 
 .header {
-    display: flex;
+    display: flex;      /* Allignement flex Hébergements et Activités*/
     justify-content: space-between; /* espace entre les div  */
     align-items: flex-start; /* allignement  */
-    padding: 20px;   /* marge extérieur  */
+    padding-top: 30px;   /* marge extérieur  */
    
 }
 .logo {
-    max-width: 4%;  /* taille du logo */
+    margin-left: -18px;  /* allignement de mon logo */
+    max-width: 50px;  /* taille du logo */
     height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
 }
 .nav-links {
     display: flex; /* espace entre les div  */
-    gap: 20px; 
+    gap: 20px;  /* espace */
     
 }
 
 
-.nav-link:hover {
-    color: blue; 
+.nav-link:hover {      /* couleur lorsque je passe la souris sur heber / activ */ 
+    color: #0065FC; 
     position: relative; /* position */
 }
 .nav-link:hover::before {   /* lorsque je passe la souris, barre bleu au dessus d'hebergement / activité */
@@ -45,9 +48,113 @@
     left: 0;
     right: 0;
     margin-top: -20px;
-    border-top: 2px solid blue; /* bordure top a la selection */
+    border-top: 2px solid #0065FC; /* bordure top a la selection + couleur*/
 }
 
+
+
+
+
+
+/***** NAV  *****/
+
+
+.search-bar {
+    display: flex;
+    border-radius: 25px;
+    padding: 10px;
+    max-width: 20%; /*  limite la largeur de la search bar */
+    margin-top: 35px;
+   
+}
+
+.location-input {
+    display: flex;    
+    align-items: center; /* Ajouté pour centrer le logo de localisation */
+    background-color: lightgrey;
+    border-radius: 15px 0 0 15px;
+    flex-grow: 1;
+        
+}
+
+.fa-solid{
+    color: black;
+}
+
+.fa-location-dot {
+    margin-right: 15px;
+    padding-left: 15px;
+    
+}
+
+
+
+input[type=text] {
+    border: 1px solid rgba(0,0,0,0.1); /* bordures presque transparentes */
+    padding: 13px;          /*  largeur pour la recherche   */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
+input[type=text]::placeholder, button {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
+
+button {
+    padding: 10px 20px; 
+   border-radius: 0 15px 15px 0; 
+   background-color: #0065FC; 
+   color:white; 
+   border: 1px solid rgba(0,0,0,0.1); /* bordures presque transparentes */
+   
+}
+/***** barre de filtres ******/
+
+.filtres {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.container{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.element {
+    border: 2px solid #D9D9D9;  /* Bordure + couleur */
+    border-radius: 25px; /* Coins arrondis */
+    padding: 10px; /* Espace à l'intérieur de la bordure */
+}
+
+.element:hover, .element:active {
+    background-color: #DEEBFF; /* fond bleu selection et clic */
+}
+
+.i{
+    border: 1px solid #D9D9D9;  /* Bordure + couleur */
+    border-radius: 50% ;
+    padding: 8px;  /* pour que le rond soit adapté au i */
+    margin: 5px;
+    width: 10px;  /* largeur du i pour pouvoir adapter le rond autour*/
+    height: 10px;  /* hauteur du i */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
