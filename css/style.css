@@ -20,10 +20,9 @@
   display: flex; /* Allignement flex Hébergements et Activités*/
   justify-content: space-between; /* espace entre les div  */
   align-items: flex-start; /* allignement  */
-  padding-top: 30px; /* marge extérieur  */
+  padding-top: 12px; /* marge extérieur  */
 }
 .logo {
-  margin-left: -18px; /* allignement de mon logo */
   max-width: 50px; /* taille du logo */
   height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
 }
@@ -58,6 +57,7 @@
   flex-grow: 1;
   width: fit-content;
   box-sizing: border-box;
+  height: auto;
 }
 
 .fa-solid.fa-location-dot {
@@ -69,7 +69,6 @@
   display: flex;
   width: auto;
   align-items: center; /*  centrer le logo localisation   */
-
   margin-right: 15px; /*  largeur encadrement localisation   */
   padding-left: 15px;
 }
@@ -144,7 +143,7 @@ button {
 
 /****** General ***********/
 
-/** Création des card  **/
+/** Création des card // Hébergement à Marseille **/
 
 .hebergement {
   margin-top: 30px; /** marges top bot  **/
@@ -203,6 +202,51 @@ button {
   height: 55%; /* hauteur de l'image */
   object-fit: cover; /** ne dépasse pas du cadre **/
   border-radius: 20px 20px 0 0; /** radius **/
+}
+
+/** Activités à Marseille  **/
+/** Activités à Marseille  **/
+/** Activités à Marseille  **/
+
+.cartesactiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes de largeur égale */
+  grid-gap: 30px;
+}
+
+.cartesact {
+  background-color: #ffffff;
+  border-radius: 20px; /* coins arrondis */
+  margin-top: 30px;
+  overflow: hidden; /* pour que l'image ne dépasse pas les coins arrondis */
+  padding-bottom: 4px;
+}
+
+.cartesact img {
+  width: 100%; /** largeur img **/
+  height: 380px; /** hauteur imposé **/
+  object-fit: cover; /** ne dépasse pas du cadre / adaptation de l'image **/
+  border-radius: 20px 20px 0 0; /** radius **/
+}
+
+/** footer  **/
+/** footer  **/
+/** footer  **/
+
+.footerbloc {
+  background-color: var(--main-bg-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+}
+
+.bloc {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding-left: 20px;
+}
+.bloc .texte-raleway {
+  margin-top: 15px;
 }
 
 /** code déja integré **/

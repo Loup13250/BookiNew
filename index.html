@@ -33,8 +33,8 @@
 
         <div class="nav-links">
           <!--  div de l' hébergements et activités  -->
-          <a href="hebergement.html" class="nav-link">Hébergements</a>
-          <a href="activite.html" class="nav-link">Activités</a>
+          <a href="#hebergement" class="nav-link">Hébergements</a>
+          <a href="#activite" class="nav-link">Activités</a>
         </div>
       </header>
 
@@ -56,7 +56,7 @@
         <!--  bar filtres + importation icones -->
 
         <div class="container">
-          <div class="filtres">Filtres</div>
+          <p class="filtres">Filtres</p>
           <div class="element element1">
             <i class="fa-solid fa-money-bill-1-wave"></i> Économique
           </div>
@@ -82,8 +82,9 @@
         <div class="hebergements-and-populaires">
           <section class="hebergements">
             <div class="hebergement">
+              <div id="hebergement"></div>
+              <!--   endroit ou le lien du haut hebergement renvoi-->
               <p class="texte-raleway-titre">Hébergements à Marseille</p>
-
               <div class="cartesbox">
                 <a href="index.html">
                   <!-- carte cliquable ( remplacer index.html par le lien voulu) -->
@@ -162,6 +163,7 @@
                       src="./images/hebergements/annie-spratt.jpg"
                       alt="Hôtel de la mer"
                     />
+
                     <h2>Hôtel de la mer</h2>
                     <p class="texte-raleway2">
                       Nuit à partir de 46<span class="euro">€</span>
@@ -224,7 +226,9 @@
                 </div>
               </div>
 
-              <div class="afficher">Afficher plus</div>
+              <a href="hebergement.html">
+                <div class="afficher">Afficher plus</div>
+              </a>
             </div>
           </section>
 
@@ -322,15 +326,99 @@
           </section>
         </div>
         <!-- Activités a Marseille   -->
+        <!-- Activités a Marseille   -->
+        <!-- Activités a Marseille   -->
+
         <section class="Activite">
           <div class="Activite">
+            <!-- renvoi du lien clic activité -->
             <p class="texte-raleway-titre">Activités à Marseille</p>
+
+            <div class="cartesactiv">
+              <!-- div des 4 activités -->
+              <a href="index.html">
+                <!-- carte cliquable ( remplacer index.html par le lien voulu) -->
+
+                <div class="cartesact">
+                  <!-- div 1 des cartes activités -->
+                  <img
+                    src="./images/activites/reno-laithienne.jpg"
+                    alt="Vieux-Port"
+                  />
+                  <h2 class="card-title">Vieux-Port</h2>
+                </div>
+              </a>
+              <!-- fin carte activité cliquable -->
+
+              <a href="index.html">
+                <!-- carte cliquable  -->
+
+                <div class="cartesact">
+                  <!-- div 2 -->
+                  <img
+                    src="./images/activites/paul-hermann.jpg"
+                    alt="Fort de Pomègues"
+                  />
+                  <h2 class="card-title">Fort de Pomègues</h2>
+                </div>
+              </a>
+              <!-- fin carte activité cliquable -->
+
+              <a href="index.html">
+                <!-- carte cliquable  -->
+
+                <div class="cartesact">
+                  <!-- div 3 -->
+                  <img
+                    src="./images/activites/kilyan-sockalingum.jpg"
+                    alt="Parc national des Calanques"
+                  />
+                  <h2 class="card-title">Parc national des Calanques</h2>
+                </div>
+              </a>
+              <!-- fin carte activité cliquable -->
+
+              <a href="index.html">
+                <!-- carte cliquable  -->
+
+                <div class="cartesact">
+                  <!-- div 4 -->
+                  <img
+                    src="./images/activites/florian-wehde.jpg"
+                    alt="Notre-Dame-De-la-Garde"
+                  />
+                  <h2 class="card-title">Notre-Dame-De-la-Garde</h2>
+                </div>
+              </a>
+              <!-- fin carte activité cliquable -->
+            </div>
           </div>
         </section>
       </main>
 
       <!-- Footer   -->
-      <footer></footer>
+      <footer>
+        <div class="footerbloc">
+          <!-- div contenant les 3 bloc du footer   -->
+          <div class="bloc">
+            <!-- div bloc du footer   -->
+            <p class="filtres">À propos</p>
+            <p class="texte-raleway">Fonctionnement du site</p>
+            <p class="texte-raleway">Conditions générales</p>
+            <p class="texte-raleway">Données et confidentialité</p>
+          </div>
+          <div class="bloc">
+            <p class="filtres">Nos hébergements</p>
+            <p class="texte-raleway">Charte qualité</p>
+            <p class="texte-raleway">Proposer votre hôtel</p>
+          </div>
+          <div class="bloc">
+            <p class="filtres">Assistance</p>
+            <p class="texte-raleway">Centre d'aide</p>
+            <p class="texte-raleway">Nous contacter</p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
