@@ -17,6 +17,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -40,34 +45,49 @@
 
       <!--  Nav Navigation  -->
       <nav>
-        <p class="texte-raleway-titre">
-          Trouvez votre hébergement pour des vacances de rêve
-        </p>
-        <p class="texte-raleway">En plein centre-ville ou en pleine nature</p>
+        <div class="navbar">
+          <p class="texte-raleway-titre">
+            Trouvez votre hébergement pour des vacances de rêve
+          </p>
+          <p class="texte-raleway">En plein centre-ville ou en pleine nature</p>
 
-        <!--  bar-recherche  -->
+          <!--  bar-recherche  -->
 
-        <form action="index.html" method="get" class="search-bar">
-          <i class="fa-solid fa-location-dot"></i>
-          <input type="text" name="location" placeholder="Marseille, France" />
-          <button type="submit">Rechercher</button>
-        </form>
+          <form action="index.html" method="get" class="search-bar">
+            <i class="fa-solid fa-location-dot"></i>
+            <input
+              type="text"
+              name="location"
+              placeholder="Marseille, France"
+            />
+            <button type="submit" class="search-button">
+              <span class="button-text">Rechercher</span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
 
+            <!-- <button type="submit">Rechercher</button> -->
+          </form>
+        </div>
         <!--  bar filtres + importation icones -->
 
         <div class="container">
-          <p class="filtres">Filtres</p>
-          <div class="element element1">
-            <i class="fa-solid fa-money-bill-1-wave"></i> Économique
+          <div class="filtrecolonne">
+            <p class="filtres">Filtres</p>
           </div>
-          <div class="element element2">
-            <i class="fa-solid fa-person"></i> Familial
-          </div>
-          <div class="element element3">
-            <i class="fa-solid fa-heart"></i> Romantique
-          </div>
-          <div class="element element4">
-            <i class="fa-solid fa-fire"></i> Nos pépites
+
+          <div class="elementflex">
+            <div class="element element1">
+              <i class="fa-solid fa-money-bill-1-wave"></i> Économique
+            </div>
+            <div class="element element2">
+              <i class="fa-solid fa-person"></i> Familial
+            </div>
+            <div class="element element3">
+              <i class="fa-solid fa-heart"></i> Romantique
+            </div>
+            <div class="element element4">
+              <i class="fa-solid fa-fire"></i> Nos pépites
+            </div>
           </div>
         </div>
 
@@ -330,8 +350,10 @@
         <!-- Activités a Marseille   -->
 
         <section class="Activite">
-          <div class="Activite">
-            <!-- renvoi du lien clic activité -->
+          <div class="Activitediv">
+            <div id="activite"></div>
+            <!-- renvoi du lien clic activité header-->
+
             <p class="texte-raleway-titre">Activités à Marseille</p>
 
             <div class="cartesactiv">

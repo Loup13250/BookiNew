@@ -7,6 +7,7 @@
   font-weight: 700; /* Gras */
   font-size: 22px;
   margin-bottom: 5px; /* enlever l'ecart entre les 2 <p> */
+  margin: 0;
 }
 
 .texte-raleway {
@@ -14,6 +15,7 @@
   font-family: "Raleway", sans-serif, bold;
   font-size: 16px;
   margin-top: 0px; /* enlever l'ecart entre les 2 <p> */
+  margin-bottom: 0px;
 }
 
 .header {
@@ -98,6 +100,20 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1); /* bordures presque transparentes */
 }
 
+.button-text {
+  display: inline; /* Afficher le texte par défaut */
+}
+
+.fa-solid.fa-magnifying-glass {
+  display: none; /* Cacher l'icône de la loupe par défaut */
+}
+
+.search-button .fa-solid.fa-magnifying-glass {
+  color: #ffffff;
+}
+
+/***** barre de filtres ******/
+/***** barre de filtres ******/
 /***** barre de filtres ******/
 
 .filtres {
@@ -114,6 +130,10 @@ button {
   justify-content: flex-start;
   gap: 15px;
   align-items: center;
+}
+
+.elementflex {
+  display: flex;
 }
 
 .element {
@@ -143,12 +163,16 @@ button {
 
 /****** General ***********/
 
-/** Création des card // Hébergement à Marseille **/
-
-.hebergement {
-  margin-top: 30px; /** marges top bot  **/
-  margin-bottom: 30px;
+.hebergements-and-populaires {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
+
+.footerbloc {
+  padding-top: 35px;
+}
+
+/** Création des card // Hébergement à Marseille **/
 
 .afficher {
   /** text en bas de page **/
@@ -158,8 +182,6 @@ button {
   font-size: 18px;
   align-items: flex-end;
   margin-top: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 /** polices des cartes **/
@@ -195,6 +217,7 @@ button {
   height: 200px; /* hauteur de la carte */
   overflow: hidden; /* pour que l'image ne dépasse pas les coins arrondis */
   padding-bottom: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* bordure transparante ( ombres) */
 }
 
 .cartes img {
@@ -208,6 +231,10 @@ button {
 /** Activités à Marseille  **/
 /** Activités à Marseille  **/
 
+.Activite {
+  padding: 30px;
+}
+
 .cartesactiv {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes de largeur égale */
@@ -220,6 +247,13 @@ button {
   margin-top: 30px;
   overflow: hidden; /* pour que l'image ne dépasse pas les coins arrondis */
   padding-bottom: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* bordure transparante ( ombres) */
+  border-radius: 20px; /* coins arrondis */
+}
+
+.cartesact h2 {
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
 .cartesact img {
@@ -234,6 +268,7 @@ button {
 /** footer  **/
 
 .footerbloc {
+  margin-top: 35px;
   background-color: var(--main-bg-color);
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
@@ -380,10 +415,38 @@ a {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+/****** Media queries ***********/
+/****** Media queries ***********/
+
+/* Pour les PC ( grand ecran ) */
+@media (min-width: 1025px) {
+  /* pour les ecran de min 1025px */
+  body {
+    max-width: 1440px; /* affichage max en 1440px */
+    margin: 0 auto; /* Centrer le contenu et ajouter des marges blanches sur les côtés */
+  }
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  /* css pour les tablette de taille max 1024 px et min 768 */
+
   .hebergements-and-populaires {
     flex-direction: column;
+  }
+
+  /*  barre de filtres */
+  /*  barre de filtres */
+
+  .container {
+    flex-direction: column; /*  colonne pour que le filtre soit positionné au dessus  */
+    gap: 20px; /* espace avec les elements  */
+    align-items: flex-start; /* a gauche */
+  }
+
+  .cartesact img {
+    width: 100%; /** largeur img **/
+    height: 160px; /** hauteur imposé divisé par 2 **/
   }
 
   .hebergements {
@@ -416,5 +479,221 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  /* css pour les telephones de taille max 768  */
+
+  nav {
+    /* gestion des marges / ajustement avec les @media */
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .header {
+    flex-direction: column; /* Change la direction du flex pour empiler les éléments */
+    align-items: center; /* Centre les éléments */
+  }
+
+  /* Nav hebergement / activité  */
+  /* Nav hebergement / activité  */
+  /* Nav hebergement / activité  */
+
+  .nav-links {
+    width: 100%; /* Ajoute une largeur de 100% pour prendre toute la largeur de l'écran */
+    gap: 0;
+  }
+
+  .nav-link {
+    border-bottom: 2px solid #f2f2f2; /* bordure grise en bas  */
+    padding: 15px 0; /*  padding text / bar */
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-link:hover::before {
+    display: none; /* Supprime la barre bleue au-dessus des liens lors du survol */
+  }
+
+  .nav-link:hover {
+    border-bottom: 2px solid #0065fc; /* bordure bleu en dessous des liens  */
+    color: #0065fc;
+  }
+
+  /* text trouver + barre /form recherche */
+  /* text trouver + barre /form recherche */
+  /* text trouver + barre /form recherche */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+  }
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input[type="text"] {
+    width: 767px;
+  }
+
+  .button-text {
+    display: none; /* Cacher le texte */
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    display: inline; /* Afficher l'icône de la loupe lorsque l'écran est petit */
+  }
+
+  /*  barre de filtres */
+  /*  barre de filtres */
+  /*  barre de filtres */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container .filtres {
+    display: block;
+    margin: 0;
+
+    margin-right: 339px;
+  }
+
+  .elementflex {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crée deux colonnes de taille égale */
+    row-gap: 20px;
+    flex-grow: 1;
+  }
+
+  /*
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+*/
+
+  /*  ordre d'affichage */
+  /*  ordre d'affichage */
+
+  .hebergements {
+    order: 2; /*  ordre d'affichage  apres populaire*/
+  }
+
+  /*  Populaire */
+  /*  Populaire */
+  /*  Populaire */
+
+  .hebergements-and-populaires section {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+  }
+  .populaires {
+    order: 1;
+    margin-top: 0;
+  }
+  .populaires-cards {
+    display: flex;
+    flex-direction: column; /*  card en colonne pour affichage tel */
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .populaires-cards a {
+    width: 100%;
+  }
+
+  .populaires-cards .card {
+    margin-top: 15px;
+  }
+
+  /*  hebergements */
+  /*  hebergements */
+  /*  hebergements */
+
+  section.hebergements {
+    background-color: white;
+    padding: 20px;
+  }
+
+  .cartesbox {
+    grid-template-columns: 1fr; /*grid 1 par colonne*/
+    box-sizing: border-box;
+    grid-gap: 15px;
+  }
+
+  .cartesbox .cartes {
+    margin-top: 0;
+    overflow: visible;
+  }
+  .cartes img {
+    height: 50%;
+
+    object-fit: cover;
+  }
+
+  .cartes {
+  }
+  /*  Activité a marseille */
+  /*  Activité a marseille */
+  /*  Activité a marseille */
+
+  .Activite {
+    padding: 30px;
+  }
+
+  section.Activite {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cartesactiv {
+    grid-template-columns: 1fr; /*grid 1 par colonne*/
+    grid-gap: 15px;
+  }
+
+  /*  Filtres */
+  /*  Filtres */
+  /*  Filtres */
+
+  /*
+  .filtres {
+  }
+
+  .i {
+  }
+*/
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /*  Footer */
+  /*  Footer */
+  /*  Footer */
+  .footerbloc {
+    grid-template-columns: 1fr; /*grid 1 par colonne*/
+    padding: 30px;
+  }
+}
+/* largeur minimale de mon site*/
+@media (max-width: 320px) {
+}
+
+@media (max-width: 320px) {
+  body {
+    display: none;
+  }
 }
