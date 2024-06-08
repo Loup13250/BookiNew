@@ -2,7 +2,7 @@
 /****** header ***********/
 
 .texte-raleway-titre {
-  /* police Gras */
+  /* création div pour titres  */
   font-family: "Raleway", sans-serif;
   font-weight: 700; /* Gras */
   font-size: 22px;
@@ -22,15 +22,17 @@
   display: flex; /* Allignement flex Hébergements et Activités*/
   justify-content: space-between; /* espace entre les div  */
   align-items: flex-start; /* allignement  */
-  padding-top: 12px; /* marge extérieur  */
+  padding-top: 12px; /* padding top pour créer la bordure bleu ( hover )  */
 }
 .logo {
   max-width: 50px; /* taille du logo */
-  height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
+
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .nav-links {
   display: flex; /* espace entre les div  */
-  gap: 20px; /* espace */
+  gap: 50px; /* espace */
 }
 
 .nav-link:hover {
@@ -45,12 +47,22 @@
   top: 0;
   left: 0;
   right: 0;
-  margin-top: -20px;
+  margin-top: -12px;
   border-top: 2px solid #0065fc; /* bordure top a la selection + couleur*/
 }
 
+.error-message {
+  /* Message d'erreur lorsque l'ecran est de - de 320px */
+  display: none;
+}
+
+/***** NAV  *****/
+/***** NAV  *****/
 /***** NAV  *****/
 
+.navbar {
+  padding-top: 30px;
+}
 .search-bar {
   display: flex;
   border-radius: 15px;
@@ -71,8 +83,7 @@
   display: flex;
   width: auto;
   align-items: center; /*  centrer le logo localisation   */
-  margin-right: 15px; /*  largeur encadrement localisation   */
-  padding-left: 15px;
+  padding: 15px;
 }
 
 input[type="text"] {
@@ -81,6 +92,8 @@ input[type="text"] {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: black;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 input[type="text"]::placeholder,
@@ -119,6 +132,7 @@ button {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  margin: 0;
 }
 
 .container {
@@ -133,14 +147,24 @@ button {
 
 .elementflex {
   display: flex;
+  gap: 15px;
+}
+
+.fa-solid {
+  padding-right: 10px;
 }
 
 .element {
   border: 2px solid #d9d9d9; /* Bordure + couleur */
   border-radius: 25px; /* Coins arrondis */
-  padding: 10px; /* Espace à l'intérieur de la bordure */
+  padding: 10px; /*Espace à l'intérieur de la bordure */
   font-size: 17px;
   font-weight: 700;
+  padding-left: 19px;
+  padding-right: 19px;
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  overflow: hidden; /* Masque le texte qui dépasse */
+  text-overflow: ellipsis; /* Affiche des points de suspension lorsque le texte est trop long */
 }
 
 .element:hover,
@@ -171,6 +195,8 @@ button {
   padding-top: 35px;
 }
 
+/** Création des card // Hébergement à Marseille **/
+/** Création des card // Hébergement à Marseille **/
 /** Création des card // Hébergement à Marseille **/
 
 .afficher {
@@ -253,6 +279,8 @@ button {
 .cartesact h2 {
   padding-left: 19px;
   padding-right: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cartesact img {
@@ -271,6 +299,7 @@ button {
   background-color: var(--main-bg-color);
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+  padding-top: 0;
 }
 
 .bloc {
@@ -436,6 +465,7 @@ a {
 
   /*  barre de filtres */
   /*  barre de filtres */
+  /*  barre de filtres */
 
   .container {
     flex-direction: column; /*  colonne pour que le filtre soit positionné au dessus  */
@@ -443,9 +473,17 @@ a {
     align-items: flex-start; /* a gauche */
   }
 
+  .container .filtres {
+    margin: 0;
+  }
+
+  /* Activités */
+  /* Activités */
+  /* Activités */
+
   .cartesact img {
     width: 100%; /** largeur img **/
-    height: 160px; /** hauteur imposé divisé par 2 **/
+    height: 200px; /** hauteur imposé divisé par 2 **/
   }
 
   .hebergements {
@@ -480,6 +518,11 @@ a {
 @media (max-width: 767.98px) {
   /* css pour les telephones de taille max 768  */
 
+  body {
+    max-width: 768.98px; /* affichage max en 768.98px */
+    margin: 0 auto; /* Centrer le contenu et ajouter des marges blanches sur les côtés */
+  }
+
   nav {
     /* gestion des marges / ajustement avec les @media */
     padding-top: 30px;
@@ -496,11 +539,15 @@ a {
   .header {
     flex-direction: column; /* Change la direction du flex pour empiler les éléments */
     align-items: center; /* Centre les éléments */
+    padding-top: 0;
   }
 
   /* Nav hebergement / activité  */
   /* Nav hebergement / activité  */
   /* Nav hebergement / activité  */
+  .navbar {
+    padding-top: 30px;
+  }
 
   .nav-links {
     width: 100%; /* Ajoute une largeur de 100% pour prendre toute la largeur de l'écran */
@@ -530,15 +577,15 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    padding-top: 0;
     width: 100%;
   }
   .search-bar {
-    width: 100%;
+    width: 100%; /* taille de la barre de recherche */
   }
 
   .search-bar input[type="text"] {
-    width: 767px;
+    width: 100%; /* taille zone de recherche input */
   }
 
   .button-text {
@@ -546,7 +593,7 @@ a {
   }
 
   .fa-solid.fa-magnifying-glass {
-    display: inline; /* Afficher l'icône de la loupe lorsque l'écran est petit */
+    display: inline; /* Afficher l'icône de la loupe a la place de rechercher */
   }
 
   /*  barre de filtres */
@@ -560,26 +607,18 @@ a {
   }
 
   .container .filtres {
-    display: block;
+    display: block; /* définition de l'element en block pour ne pas qu'il s'alligne  */
     margin: 0;
-
-    margin-right: 339px;
   }
 
   .elementflex {
-    display: grid;
+    width: 100%; /* pour que mes element prennent toute la largeur de la page */
+    display: grid; /* grid pour creer un tableau */
     grid-template-columns: 1fr 1fr; /* Crée deux colonnes de taille égale */
-    row-gap: 20px;
-    flex-grow: 1;
+    row-gap: 20px; /* espace entre les lignes  */
+    gap: 10px; /* espace entre les elements  */
+    flex-grow: 1; /* taille des elements  */
   }
-
-  /*
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-*/
 
   /*  ordre d'affichage */
   /*  ordre d'affichage */
@@ -588,23 +627,24 @@ a {
     order: 2; /*  ordre d'affichage  apres populaire*/
   }
 
+  .populaires {
+    order: 1;
+    margin-top: 0;
+  }
   /*  Populaire */
   /*  Populaire */
   /*  Populaire */
 
   .hebergements-and-populaires section {
-    padding-left: 20px;
+    padding-left: 20px; /*  gestion des marges */
     padding-right: 20px;
-    border-radius: 0;
+    border-radius: 0; /* bord droit et plus arrondi  */
   }
-  .populaires {
-    order: 1;
-    margin-top: 0;
-  }
+
   .populaires-cards {
     display: flex;
     flex-direction: column; /*  card en colonne pour affichage tel */
-    align-items: stretch;
+    align-items: stretch; /*  element qui s'etirent  */
     width: 100%;
   }
 
@@ -623,6 +663,11 @@ a {
   section.hebergements {
     background-color: white;
     padding: 20px;
+    margin-top: 15px;
+  }
+
+  .hebergements .texte-raleway-titre {
+    padding-bottom: 15px;
   }
 
   .cartesbox {
@@ -637,11 +682,11 @@ a {
   }
   .cartes img {
     height: 50%;
-
     object-fit: cover;
   }
 
-  .cartes {
+  .afficher {
+    margin-top: 15px;
   }
   /*  Activité a marseille */
   /*  Activité a marseille */
@@ -651,9 +696,8 @@ a {
     padding: 30px;
   }
 
-  section.Activite {
-    padding-left: 20px;
-    padding-right: 20px;
+  .Activite .texte-raleway-titre {
+    padding-bottom: 30px;
   }
 
   .cartesactiv {
@@ -661,17 +705,13 @@ a {
     grid-gap: 15px;
   }
 
-  /*  Filtres */
-  /*  Filtres */
-  /*  Filtres */
-
-  /*
-  .filtres {
+  .cartesact {
+    margin-top: 0;
   }
 
-  .i {
-  }
-*/
+  /*  Filtres */
+  /*  Filtres */
+  /*  Filtres */
 
   .container {
     display: flex;
@@ -684,15 +724,29 @@ a {
   /*  Footer */
   .footerbloc {
     grid-template-columns: 1fr; /*grid 1 par colonne*/
+    gap: 50px; /* espace entre les 3 bloc */
     padding: 30px;
   }
-}
-/* largeur minimale de mon site*/
-@media (max-width: 320px) {
+
+  .footerbloc .bloc {
+    margin: 0;
+  }
 }
 
+/* largeur minimale de mon site*/
+
 @media (max-width: 320px) {
-  body {
+  body *:not(.error-message) {
+    /* n'affiche plus le site sauf mon message d'erreur  */
     display: none;
+  }
+
+  .error-message {
+    /* Message d'erreur */
+    display: block;
+    margin-top: 200px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(115, 3, 150);
   }
 }
