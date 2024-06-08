@@ -81,7 +81,6 @@ input[type="text"] {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: black;
-  font-size: 18px;
 }
 
 input[type="text"]::placeholder,
