@@ -18,6 +18,14 @@
   margin-bottom: 0px;
 }
 
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700; /* Gras */
+  font-size: 22px;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
 .header {
   display: flex; /* Allignement flex Hébergements et Activités*/
   justify-content: space-between; /* espace entre les div  */
@@ -71,6 +79,7 @@
   width: fit-content;
   box-sizing: border-box;
   height: auto;
+  background-color: #f2f2f2;
 }
 
 .fa-solid.fa-location-dot {
@@ -210,7 +219,17 @@ button {
 
 /** polices des cartes **/
 
-.cartes h2 {
+.hebergement .card-title {
+  margin: 0;
+}
+
+.Activite .card-title {
+  padding-left: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cartes h3 {
   padding-top: 4px;
   font-size: 16px;
   margin: 0;
@@ -251,6 +270,9 @@ button {
   border-radius: 20px 20px 0 0; /** radius **/
 }
 
+.fa-star {
+  padding: 0;
+}
 /** Activités à Marseille  **/
 /** Activités à Marseille  **/
 /** Activités à Marseille  **/
@@ -275,7 +297,7 @@ button {
   border-radius: 20px; /* coins arrondis */
 }
 
-.cartesact h2 {
+.cartesact h3 {
   padding-left: 19px;
   padding-right: 19px;
   margin-top: 20px;
@@ -458,6 +480,10 @@ a {
 @media (max-width: 1024px) {
   /* css pour les tablette de taille max 1024 px et min 768 */
 
+  body {
+    margin: 0;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -522,7 +548,7 @@ a {
     margin: 0 auto; /* Centrer le contenu et ajouter des marges blanches sur les côtés */
   }
 
-  nav {
+  .navigation {
     /* gestion des marges / ajustement avec les @media */
     padding-top: 30px;
     padding-left: 20px;

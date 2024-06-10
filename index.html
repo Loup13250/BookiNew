@@ -44,58 +44,59 @@
       </header>
 
       <!--  Nav Navigation  -->
-      <nav>
-        <div class="navbar">
-          <p class="texte-raleway-titre">
-            Trouvez votre hébergement pour des vacances de rêve
-          </p>
-          <p class="texte-raleway">En plein centre-ville ou en pleine nature</p>
+      <div class="navigation">
+        <nav>
+          <div class="navbar">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p class="texte-raleway">
+              En plein centre-ville ou en pleine nature
+            </p>
 
-          <!--  bar-recherche  -->
+            <!--  bar-recherche  -->
 
-          <form action="index.html" method="get" class="search-bar">
-            <i class="fa-solid fa-location-dot"></i>
-            <input
-              type="text"
-              name="location"
-              placeholder="Marseille, France"
-            />
-            <button type="submit" class="search-button">
-              <span class="button-text">Rechercher</span>
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <form action="index.html" method="get" class="search-bar">
+              <i class="fa-solid fa-location-dot"></i>
+              <input
+                type="text"
+                name="location"
+                placeholder="Marseille, France"
+              />
+              <button type="submit" class="search-button">
+                <span class="button-text">Rechercher</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
 
-            <!-- <button type="submit">Rechercher</button> -->
-          </form>
-        </div>
-        <!--  bar filtres + importation icones -->
-
-        <div class="container">
-          <div class="filtrecolonne">
-            <p class="filtres">Filtres</p>
+              <!-- <button type="submit">Rechercher</button> -->
+            </form>
           </div>
+          <!--  bar filtres + importation icones -->
 
-          <div class="elementflex">
-            <div class="element element1">
-              <i class="fa-solid fa-money-bill-1-wave"></i> Économique
+          <div class="container">
+            <div class="filtrecolonne">
+              <p class="filtres">Filtres</p>
             </div>
-            <div class="element element2">
-              <i class="fa-solid fa-person"></i> Familial
-            </div>
-            <div class="element element3">
-              <i class="fa-solid fa-heart"></i> Romantique
-            </div>
-            <div class="element element4">
-              <i class="fa-solid fa-fire"></i> Nos pépites
+
+            <div class="elementflex">
+              <div class="element element1">
+                <i class="fa-solid fa-money-bill-1-wave"></i> Économique
+              </div>
+              <div class="element element2">
+                <i class="fa-solid fa-person"></i> Familial
+              </div>
+              <div class="element element3">
+                <i class="fa-solid fa-heart"></i> Romantique
+              </div>
+              <div class="element element4">
+                <i class="fa-solid fa-fire"></i> Nos pépites
+              </div>
             </div>
           </div>
-        </div>
-
+        </nav>
         <p class="texte-raleway">
           <i class="i fa-solid fa-info"></i> Plus de 500 logement sont
           disponibles dans cette ville
         </p>
-      </nav>
+      </div>
 
       <!--  Main  -->
       <main>
@@ -104,16 +105,16 @@
             <div class="hebergement">
               <div id="hebergement"></div>
               <!--   endroit ou le lien du haut hebergement renvoi-->
-              <p class="texte-raleway-titre">Hébergements à Marseille</p>
+              <h2 class="section-title">Hébergements à Marseille</h2>
               <div class="cartesbox">
-                <a href="index.html">
+                <a href="#">
                   <!-- carte cliquable ( remplacer index.html par le lien voulu) -->
                   <div class="cartes">
                     <img
                       src="./images/hebergements/fred-kleber.jpg"
                       alt="Hôtel du port"
                     />
-                    <h2 class="card-title">Hôtel du port</h2>
+                    <h3 class="card-title">Hôtel du port</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 52<span class="euro">€</span>
                     </p>
@@ -131,12 +132,12 @@
                   </div>
                 </a>
                 <div class="cartes">
-                  <a href="index.html">
+                  <a href="#">
                     <img
                       src="./images/hebergements/febrian-zakaria.jpg"
                       alt="Hôtel Chez Amina"
                     />
-                    <h2>Hôtel Chez Amina</h2>
+                    <h3 class="card-title">Hôtel Chez Amina</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 96<span class="euro">€</span>
                     </p>
@@ -155,12 +156,12 @@
                 </div>
 
                 <div class="cartes">
-                  <a href="index.html">
+                  <a href="#">
                     <img
                       src="./images/hebergements/reisetopia.jpg"
                       alt="Hôtel Les mouettes"
                     />
-                    <h2>Hôtel Les mouettes</h2>
+                    <h3 class="card-title">Hôtel Les mouettes</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 76<span class="euro">€</span>
                     </p>
@@ -178,13 +179,13 @@
                   </a>
                 </div>
                 <div class="cartes">
-                  <a href="index.html">
+                  <a href="#">
                     <img
                       src="./images/hebergements/annie-spratt.jpg"
                       alt="Hôtel de la mer"
                     />
 
-                    <h2>Hôtel de la mer</h2>
+                    <h3 class="card-title">Hôtel de la mer</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 46<span class="euro">€</span>
                     </p>
@@ -202,12 +203,12 @@
                   </a>
                 </div>
                 <div class="cartes">
-                  <a href="index.html">
+                  <a href="#">
                     <img
                       src="./images/hebergements/marcus-loke.jpg"
                       alt="Auberge La Canebière"
                     />
-                    <h2>Auberge La Canebière</h2>
+                    <h3 class="card-title">Auberge La Canebière</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 25<span class="euro">€</span>
                     </p>
@@ -225,12 +226,12 @@
                   </a>
                 </div>
                 <div class="cartes">
-                  <a href="index.html">
+                  <a href="#">
                     <img
                       src="./images/hebergements/nicate-lee.jpg"
                       alt="Auberge Le Panier"
                     />
-                    <h2>Auberge Le Panier</h2>
+                    <h3 class="card-title">Auberge Le Panier</h3>
                     <p class="texte-raleway2">
                       Nuit à partir de 23<span class="euro">€</span>
                     </p>
@@ -354,11 +355,11 @@
             <div id="activite"></div>
             <!-- renvoi du lien clic activité header-->
 
-            <p class="texte-raleway-titre">Activités à Marseille</p>
+            <h2 class="section-title">Activités à Marseille</h2>
 
             <div class="cartesactiv">
               <!-- div des 4 activités -->
-              <a href="index.html">
+              <a href="#">
                 <!-- carte cliquable ( remplacer index.html par le lien voulu) -->
 
                 <div class="cartesact">
@@ -367,12 +368,12 @@
                     src="./images/activites/reno-laithienne.jpg"
                     alt="Vieux-Port"
                   />
-                  <h2 class="card-title">Vieux-Port</h2>
+                  <h3 class="card-title">Vieux-Port</h3>
                 </div>
               </a>
               <!-- fin carte activité cliquable -->
 
-              <a href="index.html">
+              <a href="#">
                 <!-- carte cliquable  -->
 
                 <div class="cartesact">
@@ -381,12 +382,12 @@
                     src="./images/activites/paul-hermann.jpg"
                     alt="Fort de Pomègues"
                   />
-                  <h2 class="card-title">Fort de Pomègues</h2>
+                  <h3 class="card-title">Fort de Pomègues</h3>
                 </div>
               </a>
               <!-- fin carte activité cliquable -->
 
-              <a href="index.html">
+              <a href="#">
                 <!-- carte cliquable  -->
 
                 <div class="cartesact">
@@ -395,12 +396,12 @@
                     src="./images/activites/kilyan-sockalingum.jpg"
                     alt="Parc national des Calanques"
                   />
-                  <h2 class="card-title">Parc national des Calanques</h2>
+                  <h3 class="card-title">Parc national des Calanques</h3>
                 </div>
               </a>
               <!-- fin carte activité cliquable -->
 
-              <a href="index.html">
+              <a href="#">
                 <!-- carte cliquable  -->
 
                 <div class="cartesact">
@@ -409,7 +410,7 @@
                     src="./images/activites/florian-wehde.jpg"
                     alt="Notre-Dame-De-la-Garde"
                   />
-                  <h2 class="card-title">Notre-Dame-De-la-Garde</h2>
+                  <h3 class="card-title">Notre-Dame-De-la-Garde</h3>
                 </div>
               </a>
               <!-- fin carte activité cliquable -->
